@@ -8,4 +8,4 @@ It preserves the upstream **everything-is-a-plugin** architecture powered by [Co
 
 > Zorness is not affiliated with, endorsed by, or sponsored by DeepSeek AI. “DeepSeek” and “DeepSeek Harness” are used only to describe compatibility with the upstream project.
 
-Upstream documentation: [https://deepseek-harness.github.io/deepseek-harness/](https://deepseek-harness.github.io/deepseek-harness/)
+Upstream documentation: [https://deepseek-harness.github.io/deepseek-harness/](https://deepseek-harness.github.io/deepseek-harness/en/guide/quickstart)
