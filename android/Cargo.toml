@@ -1,0 +1,49 @@
+[package]
+name = "zorness-android"
+version = "0.1.0"
+edition = "2018"
+
+[lib]
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[[bin]]
+name = "zorness-android-desktop"
+path = "gen/bin/desktop.rs"
+
+[package.metadata.cargo-android]
+app-activity-name = "app.zorness.android.MainActivity"
+app-dependencies = [
+    "androidx.webkit:webkit:1.6.1",
+    "androidx.appcompat:appcompat:1.7.1",
+    "androidx.activity:activity-ktx:1.10.1",
+    "androidx.core:core-ktx:1.16.0",
+]
+project-dependencies = []
+app-plugins = []
+app-permissions = ["android.permission.INTERNET"]
+app-theme-parent = "Theme.AppCompat.DayNight.NoActionBar"
+vulkan-validation = false
+
+[package.metadata.cargo-android.env-vars]
+WRY_ANDROID_PACKAGE = "app.zorness.android"
+WRY_ANDROID_LIBRARY = "zorness_android"
+WRY_ANDROID_KOTLIN_FILES_OUT_DIR = "<android-project-dir>/app/src/main/kotlin/app/zorness/android"
+
+[package.metadata.cargo-apple.ios]
+frameworks = ["WebKit"]
+
+[dependencies]
+anyhow = "1.0"
+log = "0.4"
+wry = "0.57"
+tao = "0.37"
+
+[target.'cfg(target_os = "android")'.dependencies]
+android_logger = "0.13"
+jni = "0.21.0"
+
+[target.'cfg(not(target_os = "android"))'.dependencies]
+env_logger = "0.9.0"
+
+[target.'cfg(target_os = "ios")'.dependencies]
+core-foundation = "0.10"

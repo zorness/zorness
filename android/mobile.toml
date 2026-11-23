@@ -1,0 +1,5 @@
+[app]
+name = "zorness-android"
+stylized-name = "Zorness"
+identifier = "app.zorness.android"
+template-pack = "wry"

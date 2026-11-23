@@ -28,6 +28,13 @@ tmp/
 .vscode/
 .DS_Store
 .idea
+# Android Gradle project
+.gradle/
+local.properties
+android/**/build/
+/android/app/src/main/jniLibs/
+/android/target/
+*.iml
 mise.toml
 dist-exe/
 /dist/
